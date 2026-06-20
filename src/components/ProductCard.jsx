@@ -13,6 +13,13 @@ function ProductCard (prop) {
                 {cartCount === 0 ? 
                 "Add to cart" : `Added ${cartCount} times`}
                 </button>
+
+                <button className="remove-btn" onClick={() => {
+                    if (cartCount > 0) {setCartCount(cartCount - 1);}
+                    }
+                } disabled={cartCount === 0}>
+                        Remove
+                </button>
         </div>
 
     )
