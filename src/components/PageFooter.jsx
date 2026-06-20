@@ -3,7 +3,7 @@ function PageFooter(prop){
 
     return(
         <footer>
-            <p>&copy; {new Date().getFullYear()} {prop.footer}</p>
+            <p>&copy; {new Date().getFullYear()} {prop.footerText}</p>
         </footer>
     )
 

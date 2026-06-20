@@ -7,9 +7,11 @@ function ProductCard (prop) {
             <h3>{prop.name}</h3>
             <p>Category: {prop.category}</p>
             <p>Price : ₦{prop.price.toLocaleString()}</p>
-            <button onClick={() => setCartCount(cartCount ++)}>
-                {cartCount == 0 ? 
-                "Add to cart" : 'Added ${cartCount} times'}
+
+            <button className={cartCount > 0 ? "added-btn" : "add-btn"} onClick={() => setCartCount(cartCount + 1)}>
+               
+                {cartCount === 0 ? 
+                "Add to cart" : `Added ${cartCount} times`}
                 </button>
         </div>
 
